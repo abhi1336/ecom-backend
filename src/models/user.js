@@ -1,17 +1,21 @@
 const mongoose=require("mongoose")
 
+
+
+//db schema for user sso
+
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: false
+        required: true
     },
     password: {
         type: String,
-        required: false
+        required: true
     },
     email: {
         type: String,
-        required: false
+        required: true
     },
     createdAt: {
         type: Date,
