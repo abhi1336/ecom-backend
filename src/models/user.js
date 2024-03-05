@@ -19,7 +19,8 @@ const userSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now
+        default: Date.now,
+        get: createdAt => dateFormat(createdAt, 'mm/dd/yyyy HH:MM:ss')
     },
     isAdmin: {
         type: Boolean,
